@@ -1,9 +1,5 @@
 body {
     font-family: monospace;
-    /* background-image: url(../img/backg.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: #89fc00; */
 }
 
 button {
@@ -25,7 +21,7 @@ button {
 }
 
 .burger span {
-    border: solid 4px #ffffff;
+    border: solid 4px #4b244a;
     width: 50px;
     transition: 0.5s;
 }
@@ -92,8 +88,6 @@ body.open .menu a{
 
 .menu nav a:hover{
     opacity: 1;
-    /* color: rgb(230, 196, 7); */
-
 }
 
 .menu nav {
