@@ -1,9 +1,9 @@
 body {
     font-family: monospace;
-    background-image: url(../img/backg.jpg);
+    /* background-image: url(../img/backg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    color: #89fc00;
+    color: #89fc00; */
 }
 
 button {
