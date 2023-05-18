@@ -4,17 +4,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
+    <link rel="stylesheet" href="/styles/index.css">
+    <title>Second</title>
 </head>
 <body>
-    <div class="burger-menu">
-        <a href="deeper/about.html">About me</a>
-        <a href="#">other</a>
-
+    <button class="burger" onclick="toggleMenu()">
+        <span id="one"></span>
+        <span id="two"></span>
+        <span id="three"></span>
+    </button>
+    <div class="menu">
+        <nav>
+            <a href="grid.html" style="animation-delay: 0.2s;">
+            Responsive - grid
+            </a>
+            <a href="bootstrap.html" style="animation-delay: 0.2s;">
+            Responsive - bootstrap
+            </a>
+        </nav>
     </div>
-   
-    <footer>
-        <p>Footer</p>
-    </footer>
+
+    <script type="text/javascript">
+        const toggleMenu = () => document.body.classList.toggle("open");
+    </script>
 </body>
 </html>
