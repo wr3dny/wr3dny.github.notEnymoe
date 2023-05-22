@@ -16,8 +16,8 @@ button {
     left: 0;
     display: grid;
     place-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: 48px;
+    height: 48px;
 }
 
 .burger span {
@@ -37,6 +37,7 @@ body.open #one{
     z-index: 1;
     border: 4px solid #ec0b43;
     background-color: #ec0b43;
+    border-radius: 2px;
     transition: 0.5s;
 }
 
@@ -50,6 +51,7 @@ body.open #three{
     z-index: 2;
     border: 4px solid #ec0b43;
     background-color: #ec0b43;
+    border-radius: 2px;
     transition: 0.5s;
 }
 
