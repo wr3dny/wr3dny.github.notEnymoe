@@ -5,11 +5,11 @@
 
 .container {
     display: grid;
-    height: 100vh;
     grid-template-columns: 0.6fr 1fr 1fr ;
-    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
     grid-template-areas: 
         "sidebar about about"
+        "sidebar tlt-work tlt-work"
         "sidebar time-ln-work-2 desc-work-2"
         "sidebar time-ln-work-1 desc-work-1"
         "sidebar tile-in-edu-5 desc-edu-5"
@@ -21,16 +21,25 @@
     grid-gap: 0.2rem;
     font-family: 'Calibri';
     font-size: 24px;
-    color: #004d40;
-    text-align: center;
 }
 
 
 #sidebar {
-    background-color: #A5BAF6;
+    background-color: #f1f5f2;
     grid-area: sidebar;
     border-radius: var(--main-radius);
     padding-top: var(--main-padding);
+}
+
+#sidebar .ph-nm {
+    text-align: center;
+    font-size: 32px;
+}
+
+#tlt-work {
+    grid-area: tlt-work;
+    text-align: center;
+    font-size: 32px;
 }
 
 footer {
