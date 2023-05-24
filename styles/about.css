@@ -10,13 +10,8 @@
     grid-template-areas: 
         "sidebar about about"
         "sidebar tlt-work tlt-work"
-        "sidebar time-ln-work-2 desc-work-2"
-        "sidebar time-ln-work-1 desc-work-1"
-        "sidebar tile-in-edu-5 desc-edu-5"
-        "sidebar tile-in-edu-4 desc-edu-4"
-        "sidebar tile-in-edu-3 desc-edu-3"
-        "sidebar tile-in-edu-2 desc-edu-2"
-        "sidebar tile-in-edu-1 desc-edu-1"
+        "sidebar tlt-tr tlt-tr"
+        "sidebar tlt-edu tlt-edu"
         "footer footer footer";
     grid-gap: 0.2rem;
     font-family: 'Calibri';
@@ -38,7 +33,6 @@
 
 #tlt-work {
     grid-area: tlt-work;
-    text-align: center;
     font-size: 32px;
 }
 
@@ -64,20 +58,6 @@ footer {
         grid-template-areas:
            "sidebar"
            "about"
-            "time-ln-work-2"
-            "desc-work-2"
-            "time-ln-work-1"
-            "desc-work-1"
-            "tile-in-edu-5"
-            "desc-edu-5"
-            "tile-in-edu-4"
-            "desc-edu-4"
-            "tile-in-edu-3"
-            "desc-edu-3"
-            "tile-in-edu-2"
-            "desc-edu-2"
-            "tile-in-edu-1"
-            "desc-edu-1"
-            "footer";
+           "footer";
     }
 }
