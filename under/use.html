@@ -1,34 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../styles/use.css">
-    <title>To use</title>
-</head>
-<body>
-    <div class="info">
-        <h3>React standalone 16.14 + Babel </h3>
-        <p> 
-            head            
-        </p>
-        <p>
-            script
-        </p>
-        <ul>
-            <li>
-                src="https://unpkg.com/react@16.14.0/umd/react.development.js"
-            </li>
-            <li>
-                src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"
-            </li>
-            <li>
-                src="https://unpkg.com/@babel/standalone/babel.min.js"
-            </li>
-            
-        </ul>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>Dziedziczenie</title>
+  </head>
+  <body>
+    <div id="counter"></div>
+      <script type="text/babel">
+        class Counter extends React.Component {
+          constructor(props) {
+            super(props);
+  
+            this.state = {
+              strikes: 0,
+            };
+  
+            this.timerTick = this.timerTick.bind(this);
+          }
+  
+          timerTick = () => {
+            this.setState({
+              strikes: this.state.strikes + 1,
+            });
+          };
+  
+          componentDidMount() {
+            setInterval(this.timerTick, 1000);
+          }
+  
+          render() {
+            return <h1>{this.state.strikes / 10}</h1>;
+  
+          }
+        }
+  
+        class CounterDisplay extends React.Component {
+          render() {
+            var divStyle = {
+              width: 200,
+              textAlign: "center",
+              backgroundColor: "#192a51",
+              padding: 40,
+              fontFamily: "sans-serif",
+              color: "#ffb800",
+              borderRadius: 10,
+            };
+            return (
+              <div style={divStyle}>
+                <Counter />
+              </div>
+            );
+          }
+        }
+        ReactDOM.render(
+          <div>
+            <CounterDisplay />
+          </div>,
+          document.querySelector("#container")
+        );
+      </script>
     </div>
-    
-</body>
+    <div id="counter"></div>
+    <script type="text/babel">
+      var destitnation = document.querySelector("#container");
+
+      class Display extends React.Component {
+        render() {
+          return (
+            <div>
+              <p>{this.props.color}</p>
+              <p>{this.props.num}</p>
+              <p>{this.props.size}</p>
+            </div>
+          );
+        }
+      }
+
+      class Label extends React.Component {
+        render() {
+          return (
+            <Display {...this.props}
+              
+            />
+          );
+        }
+      }
+
+      class Shirt extends React.Component {
+        render() {
+          return (
+            <div>
+              <Label {...this.props}
+              />
+            </div>
+          );
+        }
+      }
+
+      ReactDOM.render(
+        <div>
+          <Shirt color="niebieski" num="20" size="M" />
+        </div>,
+        destitnation
+      );
+    </script>
+  </body>
 </html>

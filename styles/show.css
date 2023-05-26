@@ -1,0 +1,29 @@
+* {
+    background-color: greenyellow;
+}
+
+.back {
+    background-color: yellow;
+    border: none;
+    position: fixed;
+    height: 50px;
+    width: 100px;
+    padding: 0px;
+}
+
+#bttn1 {
+    border: 2px solid red;
+    position: relative;
+    height: 25px;
+    top: 0;
+}
+
+#bttn2 {
+    border: 2px solid blueviolet;
+    position: relative;
+    top: 25px;
+    height: 25px;
+
+}
+
+
