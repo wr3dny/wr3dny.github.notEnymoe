@@ -1,6 +1,6 @@
 body {
     font-family: monospace;
-    background-color: #9dda58;
+    background-color: #F1ECCE;
 }
 
 button {
@@ -11,14 +11,21 @@ button {
 }
 
 /* icon to click*/
-.burger {
+.burger, .burger2 {
     z-index: 3;
     top: 0;
-    left: 0;
     display: grid;
     place-items: center;
     width: 48px;
     height: 48px;
+}
+
+.burger {
+    left: 0;
+}
+
+.burger2 {
+    left: calc(100vw - 72px);
 }
 
 .burger span {
@@ -30,20 +37,17 @@ button {
 .burger, .menu {
     position: fixed;
 }
+
 .burger2 {
-    z-index: 3;
-    top: 0;
-    left: calc(100vw - 72px);
-    display: grid;
-    place-items: center;
-    width: 48px;
-    height: 48px;
+    border: solid 4px #965b9a;
+    border-radius: 50%;
+    transition: 1s;
 }
 
 .burger2 span {
-    border: solid 4px #965b9a;
-    width: 48px;
-    transition: 0.75s;
+    border: solid 1px #965b9a;
+    width: 30px;
+    transition: 1s;
 }
 
 .burger2, .menu2 {
@@ -167,20 +171,44 @@ body.open .menu a{
     100% { opacity: 1;}
 }
 
-body.open2 #one2{
+
+#two-one, #two-three, #two-five{
+    opacity: 0;
+}
+
+body.open2 .burger2{
+    border: none;
+    transition: 1s;
+}
+
+body.open2 #two-one{
+    opacity: 1;
     rotate: 45deg;
     translate: 0 16px;
     z-index: 1;
+    border: 1px solid #AFFC41;
+    background-color: #AFFC41;
+    transition: 0.75s;
+}
+
+body.open2 #two-two{
+    opacity: 0;
+}
+
+body.open2 #two-three{
+    rotate: -45deg;
+    translate: 0 -16px;
+    z-index: 2;
     border: 4px solid #AFFC41;
     background-color: #AFFC41;
     transition: 0.5s;
 }
 
-body.open2 #two2{
+body.open2 #two-four{
     opacity: 0;
 }
 
-body.open2 #three2{
+body.open2 #two-five{
     rotate: -45deg;
     translate: 0 -16px;
     z-index: 2;
