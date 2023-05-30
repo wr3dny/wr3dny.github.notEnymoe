@@ -17,7 +17,7 @@
   <body>
     <div id="container"></div>
     <script type="text/babel">
-      class Counter extends React.Component {
+      class FlashCounter extends React.Component {
         constructor(props) {
           super(props);
 
@@ -44,7 +44,7 @@
         }
       }
 
-      class CounterDisplay extends React.Component {
+      class FlashCounterDisplay extends React.Component {
         render() {
           var divStyle = {
             width: 200,
@@ -62,6 +62,7 @@
           );
         }
       }
+      
       ReactDOM.render(
         <div>
           <CounterDisplay />

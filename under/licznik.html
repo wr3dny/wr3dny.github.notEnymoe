@@ -17,6 +17,18 @@
   <body>
     <div id="container"></div>
     <script type="text/babel">
+      class FlashCounter extends React.Component {
+        constructor(props) {
+          super(props);
+          this.state = {
+            strikes = 0,
+          };
+        }
+
+      }
+
+
+
       class Counter extends React.Component {
         render() {
           var textStyle = {
@@ -95,10 +107,12 @@
           );
         }
       }
+     
 
       ReactDOM.render(
         <div>
           <CounterParent />
+          <FlashCounter />
         </div>,
         document.querySelector("#container")
       );
