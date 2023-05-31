@@ -14,9 +14,12 @@
       }
     </style>
   </head>
-  <body>
+
     <div id="container"></div>
     <script type="text/babel">
+
+      
+      
       class FlashCounter extends React.Component {
         constructor(props) {
           super(props);
@@ -62,9 +65,14 @@
           );
         }
       }
+
+      class MainBttn extends React.Component {
+        
+      }
       
       ReactDOM.render(
         <div>
+          <MainBttn />
           <CounterDisplay />
         </div>,
         document.querySelector("#container")
