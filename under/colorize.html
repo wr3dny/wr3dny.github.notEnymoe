@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <title>React standalone - licznik</title>
+    <style>
+      #container {
+        padding: 50px;
+        background-color: #fff;
+      }
+
+      .colorSquare {
+        box-shadow: 0 0 25px 0;
+        width: 250px;
+        height: 250px;
+        margin-bottom: 15px;
+      }
+
+      .colorArea input {
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #ccc;
+      }
+
+      .colorArea button{
+        padding: 10px;
+        font-size: 16px;
+        border: 2px solid #b370b0;
+        background-color: #87255B;
+        color: #FF3CC7;
+
+      }
+
+      .colorArea button:hover{
+        background-color: #F0F600;
+        color: #87255B;
+        cursor: pointer;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="container"></div>
+    <script type="text/babel">
+    class Colorize extends React.Component {
+        constructor(props) {
+            super(props);
+            this.state={
+                color:"",
+                bgColor: "white"
+            }
+            this.colorValue = this.colorValue.bind(this);
+            this.setNewColor = this.setNewColor.bind(this);
+        }
+        colorValue(e) {
+            this.setState({
+                color: e.target.value
+            })
+        }
+        setNewColor(e) {
+            this.setState({
+                bgColor: this.state.color
+            }) 
+            e.preventDefault();
+        }
+        render(){
+            var squareStyle = {
+                backgroundColor: this.state.bgColor
+            }
+
+        }
+    }
+
+
+
+  ReactDOM.render(
+    <div>
+    </div>,
+    document.querySelector("#container")
+  );
+</script>
+</body>
