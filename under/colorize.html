@@ -7,7 +7,7 @@
     <script src="https://unpkg.com/react@16.14.0/umd/react.development.js"></script>
     <script src="https://unpkg.com/react-dom@16.14.0/umd/react-dom.development.js"></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <title>React standalone - licznik</title>
+    <title>React standalone - colorizer</title>
     <style>
       #container {
         padding: 50px;
@@ -27,61 +27,98 @@
         border: 2px solid #ccc;
       }
 
-      .colorArea button{
+      .colorArea button {
         padding: 10px;
         font-size: 16px;
         border: 2px solid #b370b0;
-        background-color: #87255B;
-        color: #FF3CC7;
-
+        background-color: #87255b;
+        color: #ff3cc7;
       }
 
-      .colorArea button:hover{
-        background-color: #F0F600;
-        color: #87255B;
+      .colorArea button:hover {
+        background-color: #f0f600;
+        color: #87255b;
         cursor: pointer;
+      }
+
+      #colorHeading {
+        font-family: "monospace";
+        font-size: 50px;
+        color: #87255b;
       }
 
     </style>
   </head>
   <body>
+    <h1 id="colorHeading">Colorizer !</h1>
     <div id="container"></div>
     <script type="text/babel">
-    class Colorize extends React.Component {
+      
+      var heading = document.querySelector("#colorHeading");
+      class ColorLabel extends React.Component {
+
+        render() {
+          return ReactDom.creatPortal(" - " + this.props.color, heading);
+        }
+      }
+
+      class Colorize extends React.Component {
         constructor(props) {
-            super(props);
-            this.state={
-                color:"",
-                bgColor: "white"
-            }
-            this.colorValue = this.colorValue.bind(this);
-            this.setNewColor = this.setNewColor.bind(this);
+          super(props);
+          this.state = {
+            color: "",
+            bgColor: "white",
+          };
+          this.colorValue = this.colorValue.bind(this);
+          this.setNewColor = this.setNewColor.bind(this);
         }
         colorValue(e) {
-            this.setState({
-                color: e.target.value
-            })
+          this.setState({
+            color: e.target.value,
+          });
         }
         setNewColor(e) {
-            this.setState({
-                bgColor: this.state.color
-            }) 
-            e.preventDefault();
+          this.setState({
+            bgColor: this.state.color,
+          });
+          this._input.focus(); // focus on input after submit
+          this._input.value = ""; // clear input after submit
+
+          e.preventDefault();
         }
-        render(){
-            var squareStyle = {
-                backgroundColor: this.state.bgColor
-            }
 
+        render() {
+          var squareStyle = {
+            backgroundColor: this.state.bgColor,
+          };
+          var self = this;
+          return (
+            <div className="colorArea">
+
+              <div style={squareStyle} className="colorSquare"></div>
+              <form onSubmit={this.setNewColor}>
+                <input
+                  onChange={this.colorValue}
+                  ref={function (el) {
+                    self._input = el;
+                  }}
+                  placeholder="Set color name"
+                ></input>
+                <button type="submit">OK</button>
+              </form>
+
+            </div>
+          );
         }
-    }
+      }
 
+      ReactDOM.render(
+        <div>
+          <Colorize />
 
-
-  ReactDOM.render(
-    <div>
-    </div>,
-    document.querySelector("#container")
-  );
-</script>
-</body>
+        </div>,
+        document.querySelector("#container")
+      );
+    </script>
+  </body>
+</html>
