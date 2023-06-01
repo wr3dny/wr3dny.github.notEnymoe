@@ -13,8 +13,8 @@ button {
 /* icon to click*/
 .burger {
     z-index: 3;
-    top: 0;
-    left: 0;
+    top: 20px;
+    left: 20px;
     display: grid;
     place-items: center;
     width: 48px;
@@ -171,6 +171,78 @@ body.open .menu a{
 	-webkit-background-clip: text;
 	color: transparent;
 	background-image: url(/img/light.jpg);
+}
+
+.secondButton {
+    z-index: 4;
+    border: 1px solid #07030a;
+    width: 80px;
+    height: 80px;
+    padding: 0;
+    position: fixed;
+    top: 20px;
+    left: calc(100vw - 120px);
+    transition: 0.25s;
+    background-color: #07030a;
+    color: #89fc00;
+}
+
+.secondButton:hover {
+    border-radius: 50%;
+    background-color: #89fc00;
+    color: #07030a;
+}
+
+.secondButton #clickSpan1, #clickSpan2 {
+    margin: 0;
+    opacity: 0;
+    border: 2px solid #07030a;
+    /* border-radius: 50%; */
+    width: 30px;
+    height: 30px;
+
+}
+
+.secondButton:hover #clickSpan1 {
+    z-index: 5;
+    opacity: 1;
+
+}
+
+.secondButton:hover #clickSpan2 {
+    z-index: 6;
+    opacity: 1;
+    width: 60px;
+    height: 60px;
+}
+
+#divOne, #divTwo, #divThree {
+    border: 1px solid #07030a;
+    width: 80px;
+    height: 80px;
+    position: fixed;
+    top: 20px;
+    left: calc(100vw - 180px);
+    transition: 0.25s;
+    background-color: #07030a;
+    color: #89fc00;
+    opacity: 0;
+}
+
+#divOne {
+    z-index: 1;
+}
+
+#divTwo {
+    z-index: 2;
+}
+
+#divThree {
+    z-index:3;
+}
+
+body.openDiv #divOne {
+    translate: -200px;
 }
 
 

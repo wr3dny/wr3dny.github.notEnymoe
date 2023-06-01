@@ -5,7 +5,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: 0.6fr 1fr 1fr;
+  grid-template-columns: 0.6fr 0.4fr 1fr;
   grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
   grid-template-areas:
     "sidebar about about"
@@ -13,12 +13,25 @@
     "sidebar time-w2 work2"
     "sidebar time-w1 work1"
     "sidebar tlt-tr tlt-tr"
+    "sidebar time-c5 "
     "sidebar tlt-edu tlt-edu"
     "footer footer footer";
   grid-gap: 0.2rem;
   font-family: "Calibri";
   font-size: 24px;
 }
+
+.timeline,
+.desc {
+  display: inline-block;
+}
+
+.photo {
+  width: 12rem;
+  height: 12rem;
+  border-radius: 50%;
+}
+
 
 #sidebar {
   background-color: #f1f5f2;
@@ -32,7 +45,41 @@
   font-size: 32px;
 }
 
+#about {
+  grid-area: about;
+}
+
 #tlt-work {
+  grid-area: tlt-work;
+  font-size: 32px;
+}
+
+#time-w2 {
+  grid-area: time-w2;
+  font-weight: bold;
+}
+
+#work2 {
+  grid-area: work2;
+}
+
+#time-w1 {
+  grid-area: time-w1;
+  font-weight: bold;
+}
+
+#work1{
+  grid-area: work1;
+}
+
+#tlt-tr {
+  grid-area: tlt-work;
+  font-size: 32px;
+}
+
+#
+
+#tlt-edu {
   grid-area: tlt-work;
   font-size: 32px;
 }
@@ -41,16 +88,6 @@ footer {
   grid-area: footer;
 }
 
-.timeline,
-.desc {
-  display: inline-block;
-}
-
-.photo {
-  width: 12rem;
-  height: 12rem;
-  border-radius: 50%;
-}
 
 @media only screen and (max-width: 550px) {
   .container {
