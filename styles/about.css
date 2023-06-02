@@ -6,15 +6,20 @@
 .container {
   display: grid;
   grid-template-columns: 0.6fr 0.4fr 1fr;
-  grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
+  grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr 0.5fr;
   grid-template-areas:
     "sidebar about about"
     "sidebar tlt-work tlt-work"
     "sidebar time-w2 work2"
     "sidebar time-w1 work1"
     "sidebar tlt-tr tlt-tr"
-    "sidebar time-c5 "
+    "sidebar time-c5 cert5"
+    "sidebar time-c4 cert4"
+    "sidebar time-c5 cert3"
+    "sidebar time-c2 cert2"
+    "sidebar time-c1 cert1"    
     "sidebar tlt-edu tlt-edu"
+    "sidebar tlt-edu edu"
     "footer footer footer";
   grid-gap: 0.2rem;
   font-family: "Calibri";
