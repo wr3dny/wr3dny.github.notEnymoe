@@ -1,12 +1,13 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     height: 100vh;
+    width: 80vw;
 }
 
 .container {
     display: grid;
     grid-row: auto;
-    grid-column: auto;
+    grid-column: 1fr 1fr 1fr;
     grid-template-areas:
         "one two two"
         "one three three"
@@ -23,10 +24,9 @@ body {
         "footer footer footer";
 }
 
-.container #one div {
-    border: none;
-    font-size: 12px;
-    text-align: center;
+.date {
+    font-style: italic;
+    font-size: large;
 }
 
 #three, #eight, #nineteen {
@@ -37,13 +37,36 @@ body {
     grid-area: one;
     background-color: lightgray;
     border-radius: 5px;
+    padding: 15px;
 }
 
+#one #photoMe {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;}
+
+
+
 .photo {
-    width: 12rem;
-    height: 12rem;
+    width: 14rem;
+    height: 14rem;
     border-radius: 50%;
-  }
+
+}
+
+.name {
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+    font-size: 48px;
+    font-weight: 700;
+
+}
+
+.skills li{
+    list-style-type: "-";
+}
 
 #two {
     grid-area: two;
