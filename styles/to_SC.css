@@ -1,0 +1,19 @@
+/* textarea::-webkit-resizer {
+    border-style: groove;
+    border-width: 1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+  border-width: 2px;
+  border-style: solid;
+} */
+
+textarea::-webkit-resizer{
+    
+
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f1f1f1;
+    border-width: 2px;
+    border-style: solid;
+}
