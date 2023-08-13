@@ -1,7 +1,9 @@
+import { Select } from "../Select";
+
 export const Container = () => {
   return (
     <div className="pageContainer">
-      <p>and a container</p>
+      <p>Container</p>
     </div>
   );
 };
