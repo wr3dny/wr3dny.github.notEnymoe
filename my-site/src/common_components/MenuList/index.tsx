@@ -7,6 +7,9 @@ export const MenuList = () => {
         <li>Services</li>
         <li>About</li>
         <li>Contact</li>
+        <li>Contact</li>
+        <li>Contact</li>
+        <li>Contact</li>
       </ul>
     </div>
   );

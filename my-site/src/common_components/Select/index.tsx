@@ -1,8 +1,8 @@
 const whatToDo = () => {
   if (1 === 1) {
-    return "come in";
+    alert("come in");
   } else {
-    return "skip and exit";
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
   }
 };
 
