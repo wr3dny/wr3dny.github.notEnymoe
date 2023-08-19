@@ -1,0 +1,40 @@
+// .page-footer {
+//     position: fixed;
+//     bottom: 0;
+//     width: 100%;
+//     background-color: transparent;
+//     display: flex;
+//     justify-content: space-between;
+//     .left-part {display: flex;
+//         color: white
+//     }
+//     .right-part {
+//         background-color: #A3A9AA;
+//         height: 150px;
+//         width: 150px;
+//         border-top-left-radius: 150px;
+//         color: yellowgreen;
+//         text-align: right;
+//         padding: 20px 20px 0 0;
+//     }
+    
+
+// }
+.left-part {
+background-color: azure;
+}
+
+.countdown {
+    position: fixed;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    bottom: 0;
+    right: 0;
+    width: 130px;
+    height: 130px;
+    border: .125rem solid #F4F1BB;
+    border-top-left-radius: 130px;
+    background-color: black;
+}
+ 

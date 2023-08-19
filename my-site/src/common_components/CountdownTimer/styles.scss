@@ -1,0 +1,19 @@
+.till {
+    color: #F4F1BB;
+    display: flex;
+    justify-content: end;
+    .day-till {
+
+    font-size: 2.4rem;
+    }
+    .smaller-till {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    font-size: 0.9rem;
+    }
+    
+
+}
+
