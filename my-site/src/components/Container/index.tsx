@@ -1,3 +1,4 @@
+import { Button } from "../../common_components/Button";
 import { InputWithEnter } from "../../common_components/Input";
 import "./styles.scss";
 
@@ -6,14 +7,15 @@ export const Container = () => {
     <div className="pageContainer">
       <p>Very very chaotic page</p>
       <InputWithEnter />
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
+      <Button />
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
       <div></div>
     </div>
   );

@@ -33,13 +33,16 @@ export const Countdown = ({ targetDate }: Props) => {
   const hoursString = hours < 10 ? `0${hours}` : hours;
   const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
   const minutesString = minutes < 10 ? `0${minutes}` : minutes;
+  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
+  const secondsString = seconds < 10 ? `0${seconds}` : seconds;
 
   return (
     <div className="till">
       <div className="day-till">{days}</div>
       <div className="smaller-till">
-        <div className="hour-till">{hoursString} </div>
-        <div className="minutes-till">{minutesString} </div>
+        <div className="hour-till">{hoursString}:</div>
+        <div className="minutes-till">{minutesString}:</div>
+        <div className="seconds-till">{secondsString}</div>
       </div>
     </div>
   );
