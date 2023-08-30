@@ -1,14 +1,17 @@
-const whatToDo = () => {
-  if (1 === 1) {
-    alert("come in");
-  } else {
-    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
-  }
-};
+interface Props {
+  options: { value: string; label: string }[];
+  value: string;
+  onChange: (event: React.ChangeEvent<HTMLSelectElement>) => void;
+}
 
-export const Select = () => {
-  <select onChange={whatToDo}>
-    <option value="1">whana come in</option>
-    <option value="2">skip and exit</option>
-  </select>;
+export const Select = ({ options, value, onChange }: Props) => {
+  return (
+    <select className="select" value={value} onChange={onChange}>
+      {options.map((option) => (
+        <option key={option.value} value={option.value}>
+          {option.label}
+        </option>
+      ))}
+    </select>
+  );
 };
