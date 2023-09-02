@@ -23,11 +23,10 @@ export const Container = () => {
   const targetDate = new Date("2024-12-31T23:59:59");
 
   return (
-    <div className="pageContainer">
+    <div className="page-container">
       <p>Very very chaotic page</p>
       <InputWithEnter />
       <Button />
-      <DataGrid />
       <Select options={options} value={selectedValue} onChange={handleChange} />
       <div className="work-progress">
         Work in progress <CurrentDate /> so it's
