@@ -20,13 +20,17 @@ export const Container = () => {
     setSelectedValue(event.target.value);
   };
 
+  const handleClick = () => {
+    alert("You clicked me!");
+  };
+
   const targetDate = new Date("2024-12-31T23:59:59");
 
   return (
     <div className="page-container">
       <p>Very very chaotic page</p>
       <InputWithEnter />
-      <Button />
+      <Button onClick={handleClick} />
       <Select options={options} value={selectedValue} onChange={handleChange} />
       <div className="work-progress">
         Work in progress <CurrentDate /> so it's

@@ -1,5 +1,5 @@
 
-.menu {
+.menu-left {
     z-index: 2;
     top: 0;
     left: 0;
@@ -12,15 +12,15 @@
     transition: translate 0.375s cubic-bezier(0.175, 0.885, 0.32, 1);
 }
 
-.menu nav {
+.menu-left nav {
     opacity: 1;
 }
 
-.menu nav:hover a {
+.menu-left nav:hover a {
     opacity: 0.2;
 }
 
-body.open .menu {
+body.open .menu-left {
     opacity: 1;
     visibility: visible;
     translate: 0;
@@ -28,22 +28,22 @@ body.open .menu {
 }
 
 
-body.open .menu a{
+body.open .menu-left a{
     animation: appear 1s backwards;
 }
 
-.menu nav a:hover{
+.menu-left nav a:hover{
     opacity: 1;
 }
 
-.menu nav {
+.menu-left nav {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-.menu a {
+.menu-left a {
     position: relative;
     color: #f9f9f9;
     font-size: 32px;
@@ -52,13 +52,13 @@ body.open .menu a{
     text-decoration: none;
 }
 
-.menu a, .menu a::before, .menu a::after {
+.menu-left a, .menu-left a::before, .menu-left a::after {
     transition: 0.4s;
 }
 
 /* położenie, grubość paska, szerokość opisu, poziom na którym pojawia się pasek*/
 
-.menu a::before, .menu a::after {
+.menu-left a::before, .menu-left a::after {
     content: "";
     position: absolute;
     left: 0;
@@ -68,20 +68,20 @@ body.open .menu a{
     border-radius: 2px;
 }
 
-.menu a::before {
+.menu-left a::before {
     opacity: 0;
     background: rgba(250, 250, 250, 20%);
 }
 
 /* underline - color  */
 
-.menu a::after {
+.menu-left a::after {
     transform: scaleX(0);
     transform-origin: 0% 50%;
     background: #89fc00;
 }
 
-.menu a:hover::before {
+.menu-left a:hover::before {
     opacity: 1;
 }
 
@@ -93,88 +93,4 @@ body.open .menu a{
     0% { opacity: 0; translate:  -30px;}
     100% { opacity: 1;}
 }
-
-.main-text {
-    font-size: 48px;
-
-}
-
-
-
-.secondButton {
-    z-index: 4;
-    border: 1px solid #07030a;
-    width: 80px;
-    height: 80px;
-    padding: 0;
-    position: fixed;
-    top: 20px;
-    left: calc(100vw - 120px);
-    transition: 0.25s;
-    background-color: #07030a;
-    color: #89fc00;
-}
-
-.secondButton:hover {
-    border-radius: 50%;
-    background-color: #89fc00;
-    color: #07030a;
-}
-
-.secondButton #clickSpan1, #clickSpan2 {
-    margin: 0;
-    opacity: 0;
-    border: 2px solid #07030a;
-    /* border-radius: 50%; */
-    width: 30px;
-    height: 30px;
-
-}
-
-.secondButton:hover #clickSpan1 {
-    z-index: 5;
-    opacity: 1;
-
-}
-
-.secondButton:hover #clickSpan2 {
-    z-index: 6;
-    opacity: 1;
-    width: 60px;
-    height: 60px;
-}
-
-#divOne, #divTwo, #divThree {
-    border: 1px solid #07030a;
-    width: 80px;
-    height: 80px;
-    position: fixed;
-    top: 20px;
-    left: calc(100vw - 180px);
-    transition: 0.25s;
-    background-color: #07030a;
-    color: #89fc00;
-    opacity: 0;
-}
-
-#divOne {
-    z-index: 1;
-}
-
-#divTwo {
-    z-index: 2;
-}
-
-#divThree {
-    z-index:3;
-}
-
-body.openDiv #divOne {
-    translate: -200px;
-}
-
-
-
-
-
 
