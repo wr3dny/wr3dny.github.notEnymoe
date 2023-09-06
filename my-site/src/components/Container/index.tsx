@@ -6,6 +6,7 @@ import "./styles.scss";
 import { Select } from "../../common_components/Select";
 import { CurrentDate } from "../../common_components/CurrentDate";
 import Countdown from "../../common_components/CountdownTimer";
+import { TestBlok } from "../../common_components/Array/Array";
 
 export const Container = () => {
   const options = [
@@ -33,11 +34,15 @@ export const Container = () => {
       <Button onClick={handleClick} />
       <Select options={options} value={selectedValue} onChange={handleChange} />
       <div className="work-progress">
-        Work in progress <CurrentDate /> so it's
-        <Countdown targetDate={targetDate} /> till finish
+        <div className="first">Work in progress till end of 2024</div>
+        <div className="second">Days left:</div>
+        <div className="third">
+          <Countdown targetDate={targetDate} />
+        </div>
       </div>
+      <TestBlok />
       <div></div>
-      <div>Here will be something</div>
+
       <div></div>
       <div></div>
       <div></div>
