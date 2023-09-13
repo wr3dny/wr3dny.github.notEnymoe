@@ -1,7 +1,7 @@
-export const AboutPage = () => {
-  return (
-    <div>
-      <h1>About Page</h1>
-    </div>
-  );
+import React from "react";
+
+interface Props {}
+
+export const AboutPage = (props: Props) => {
+  return <div>About Page</div>;
 };

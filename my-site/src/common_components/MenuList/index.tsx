@@ -1,3 +1,6 @@
+import React from "react";
+import { BrowserRouter as Router, Route, Path } from "react-router-dom";
+
 import { Burger } from "../Burger";
 import "./styles.scss";
 
