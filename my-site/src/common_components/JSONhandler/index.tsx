@@ -26,7 +26,7 @@ const readAllFilesFromLocalStorage = () => {
 
 // Usage
 const allFiles = readAllFilesFromLocalStorage();
-console.log(allFiles);
+console.log("all files", allFiles);
 
 // const deleteFileFromLocalStorage = (fileName: string) => {
 //     localStorage.removeItem(fileName);
