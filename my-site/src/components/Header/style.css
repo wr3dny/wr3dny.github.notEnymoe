@@ -1,7 +1,0 @@
-.pageHeader {
-  height: 50px;
-  visibility: hidden;
-}
-.pageHeader:hover {
-  visibility: visible;
-}
